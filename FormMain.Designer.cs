@@ -29,8 +29,8 @@ partial class FormMain
     private void InitializeComponent()
     {
         splitContainer1 = new SplitContainer();
-        richTextBox1 = new RichTextBox();
-        button1 = new Button();
+        TxtChat = new RichTextBox();
+        BtnSpeak = new Button();
         ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
         splitContainer1.Panel1.SuspendLayout();
         splitContainer1.Panel2.SuspendLayout();
@@ -46,33 +46,36 @@ partial class FormMain
         // 
         // splitContainer1.Panel1
         // 
-        splitContainer1.Panel1.Controls.Add(richTextBox1);
+        splitContainer1.Panel1.Controls.Add(TxtChat);
         // 
         // splitContainer1.Panel2
         // 
-        splitContainer1.Panel2.Controls.Add(button1);
+        splitContainer1.Panel2.Controls.Add(BtnSpeak);
         splitContainer1.Size = new Size(800, 450);
-        splitContainer1.SplitterDistance = 388;
+        splitContainer1.SplitterDistance = 387;
         splitContainer1.TabIndex = 1;
         // 
-        // richTextBox1
+        // TxtChat
         // 
-        richTextBox1.Dock = DockStyle.Fill;
-        richTextBox1.Location = new Point(0, 0);
-        richTextBox1.Name = "richTextBox1";
-        richTextBox1.Size = new Size(800, 388);
-        richTextBox1.TabIndex = 1;
-        richTextBox1.Text = "";
+        TxtChat.Dock = DockStyle.Fill;
+        TxtChat.Font = new Font("Segoe UI", 19F);
+        TxtChat.Location = new Point(0, 0);
+        TxtChat.Name = "TxtChat";
+        TxtChat.Size = new Size(800, 387);
+        TxtChat.TabIndex = 1;
+        TxtChat.Text = "";
         // 
-        // button1
+        // BtnSpeak
         // 
-        button1.Dock = DockStyle.Fill;
-        button1.Location = new Point(0, 0);
-        button1.Name = "button1";
-        button1.Size = new Size(800, 58);
-        button1.TabIndex = 0;
-        button1.Text = "button1";
-        button1.UseVisualStyleBackColor = true;
+        BtnSpeak.Dock = DockStyle.Fill;
+        BtnSpeak.Font = new Font("Segoe UI", 19F);
+        BtnSpeak.Location = new Point(0, 0);
+        BtnSpeak.Name = "BtnSpeak";
+        BtnSpeak.Size = new Size(800, 59);
+        BtnSpeak.TabIndex = 0;
+        BtnSpeak.Text = "Talk!";
+        BtnSpeak.UseVisualStyleBackColor = true;
+        BtnSpeak.Click += BtnSpeak_Click;
         // 
         // FormMain
         // 
@@ -92,6 +95,6 @@ partial class FormMain
     #endregion
 
     private SplitContainer splitContainer1;
-    private RichTextBox richTextBox1;
-    private Button button1;
+    private RichTextBox TxtChat;
+    private Button BtnSpeak;
 }
