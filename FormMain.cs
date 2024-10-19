@@ -41,6 +41,7 @@ public partial class FormMain : Form
     }
     private async void btnStart_Click()
     {
+        TxtChat.Text = "";
         try
         {
             recognizer.Recognize();
