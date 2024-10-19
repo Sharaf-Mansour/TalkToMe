@@ -85,7 +85,7 @@ partial class FormMain
         Controls.Add(splitContainer1);
         Name = "FormMain";
         Text = "Form1";
-        splitContainer1.Panel1.ResumeLayout(false);
+         splitContainer1.Panel1.ResumeLayout(false);
         splitContainer1.Panel2.ResumeLayout(false);
         ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
         splitContainer1.ResumeLayout(false);
