@@ -2,7 +2,7 @@
 using PiperSharp;
 using PiperSharp.Models;
 namespace TalkToMe;
-public class SimplePlaybackProgram
+public class PiperRunner
 {
     CancellationTokenSource _cts => new();
     public async Task Run(string msg)
@@ -27,6 +27,7 @@ public class SimplePlaybackProgram
         _ = Task.Run(() => ConsoleThread(provider, msg, _cts.Token));
         _ = Task.Run(() => PlaybackThread(provider, _cts.Token));
     }
+
     void PlaybackThread(PiperWaveProvider provider, CancellationToken token)
     {
         using var outputDevice = new WaveOutEvent();
